@@ -1,0 +1,79 @@
+\documentclass[12pt]{ifi_thesis}
+\setcounter{secnumdepth}{3} % Number \subsubsection
+\setcounter{tocdepth}{3} % Include \subsubsection in ToC
+\usepackage[hyphens]{url}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{todonotes}
+\usepackage[hidelinks]{hyperref} %HYPERLINK THE LINKS. DELETE FOR PRINT**
+\usepackage{acro}
+\acsetup{first-style=short, hyperref = true } %REMOVE hyperref for print
+
+%abbreviations:
+\include{acronyms}
+
+%% Tentative: newtx for better-looking Times
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath}
+
+% Must use biblatex to produce the Published Contents and Contributions.
+\usepackage[
+    backend=biber,natbib,
+    % IMPORTANT: load a style suitable for your discipline
+    style=authoryear
+]{biblatex}
+
+% Name of your .bib file(s)
+\addbibresource{example.bib}
+\addbibresource{ownpubs.bib}
+
+\begin{document}
+\title{Smart Meter Security Analysis}
+\author{Mehdi Noroozi}
+\degreeaward{Master of Science in Informatics: Programming and Networks}
+\university{University of Oslo}    
+\address{Department of Informatics}                     
+\unilogo{uio.png}                               
+\copyyear{May 2017}  
+\defenddate{}          
+\orcid{}
+\rightsstatement{This work is licensed under a \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International License.}
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=.2\textwidth]{cc.png}
+\end{figure}}
+
+\maketitle[logo]
+
+\include{acknowledgements}
+\include{abstract}
+\tableofcontents
+\listoffigures
+\listoftables
+\printnomenclature
+\printacronyms
+
+\mainmatter
+
+\part{Introduction}
+\include{ch1_intro}
+\include{ch2_meters}
+\include{ch3_art}
+\include{ch4_modelling}
+\part{Experimentation}
+\include{ch}
+\part{ Summary}
+\include{discussion}
+\include{conclusion}
+
+\printbibliography[heading=bibintoc]
+\appendix
+\chapter{First appendix}
+%\chapter{Consent Form}
+%\printindex
+%\theendnotes
+%% Pocket materials at the VERY END of thesis
+%\pocketmaterial
+%\extrachapter{Pocket Material: Map of Case Study Solar Systems} 
+\end{document}
